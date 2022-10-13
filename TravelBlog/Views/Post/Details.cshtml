@@ -1,0 +1,23 @@
+﻿@using TravelBlog.Web.ViewModels
+@model PostViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="row">
+    <div class="card">
+        <img src=@Model.ImageUrl class="img-fluid" />
+        <div class="card-body">
+            <p class="card-text">@Model.Content</p>
+            </div>
+        </div>
+    </div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
