@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TravelBlog.Data.Models\TravelBlog.Data.Models.csproj" />
     <ProjectReference Include="..\TravelBlog.Data\TravelBlog.Data.csproj" />
     <ProjectReference Include="..\TravelBlog.Web.ViewModels\TravelBlog.Web.ViewModels.csproj" />
   </ItemGroup>

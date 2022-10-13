@@ -18,5 +18,10 @@ namespace TravelBlog.Common
         {
             public const int NameMaxLength = 50;
         }
+
+       public static class Role
+        {
+            public const string Administrator = "Administrator";
+        }
     }
 }

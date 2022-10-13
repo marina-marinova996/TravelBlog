@@ -16,14 +16,14 @@
     <div class="row">
         @foreach (var post in Model)
         {
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-sm-6 mb-2">
+                <div class="card h-100">
+                    <div class="card-body h-100">
                         <h4 class="card-title text-center">@post.Title</h4>
                         <img src=@post.ImageUrl class="img-fluid" />
                         <p class="card-text">@post.Content</p>
-                        <div class="d-grid gap-2">
-                            <a asp-controller="Post" asp-action="Details" asp-route-id="@post.Id" class="btn btn-primary">Details</a>
+                        <div class="d-flex flex-row">
+                            <a asp-controller="Post" asp-action="Details" asp-route-id="@post.Id" class="btn btn-primary flex-fill me-1">Details</a>
                         </div>
                         </div>
                 </div>

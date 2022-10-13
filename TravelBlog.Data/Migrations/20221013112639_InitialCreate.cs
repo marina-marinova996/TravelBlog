@@ -28,6 +28,8 @@ namespace TravelBlog.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -224,9 +226,9 @@ namespace TravelBlog.Data.Migrations
                 columns: new[] { "Id", "Content", "ImageUrl", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Raysko Praskalo, 124.5 m in height, is the highest waterfall in Bulgaria and the Balkan Peninsula. It is situated under Botev Peak in the central section of the Balkan Mountains and is part of the Dzhendema Reserve of the Central Balkan National Park. The nearest town is Kalofer, at 11 km to the south.", null, "Waterfall \"Raisko Praskalo\", Balkan Mountain" },
-                    { 2, "The Seven Rila Lakes are a group of glacial lakes, situated in the northwestern Rila Mountain in Bulgaria. They are the most visited group of lakes in Bulgaria. The lakes are situated between 2,100 and 2,500 metres elevation above sea level. Each lake carries a name associated with its most characteristic feature.", null, "Seven Rila Lakes, Rila Mountain" },
-                    { 3, "Vihren is the highest peak of Bulgaria's Pirin Mountains. Reaching 2,914 metres, it is Bulgaria's second and the Balkans' third highest, after Musala and Mount Olympus.!", null, "Vihren Peak, Pirin Mountain" }
+                    { 1, "Vihren is the highest peak of Bulgaria's Pirin Mountains. Reaching 2,914 metres, it is Bulgaria's second and the Balkans' third highest, after Musala and Mount Olympus.!", "/images/20220907_104644.jpg", "Vihren Peak, Pirin Mountain" },
+                    { 2, "The Seven Rila Lakes are a group of glacial lakes, situated in the northwestern Rila Mountain in Bulgaria. They are the most visited group of lakes in Bulgaria. The lakes are situated between 2,100 and 2,500 metres elevation above sea level. Each lake carries a name associated with its most characteristic feature.", "/images/20210912_103641.jpg", "Seven Rila Lakes, Rila Mountain" },
+                    { 3, "Raysko Praskalo, 124.5 m in height, is the highest waterfall in Bulgaria and the Balkan Peninsula. It is situated under Botev Peak in the central section of the Balkan Mountains and is part of the Dzhendema Reserve of the Central Balkan National Park. The nearest town is Kalofer, at 11 km to the south.", "/images/DSC01288.JPG", "Waterfall \"Raisko Praskalo\", Balkan Mountain" }
                 });
 
             migrationBuilder.CreateIndex(
